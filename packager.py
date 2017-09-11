@@ -104,12 +104,12 @@ def pack(error):
 
 def packager(option, packageName, tozip):
     clear()
-    with ZipFile(option + packageName + ".pya", "w") as zip:
+    with ZipFile(option + packageName + ".pyp", "w") as zip:
         for file in tozip:
             zip.write(file)
             os.remove(file)
     displayHeader(packmenu)
-    print("Success! Package saved as " + option + packageName + ".pya")
+    print("Success! Package saved as " + option + packageName + ".pyp")
     time.sleep(5)
     main()
 
